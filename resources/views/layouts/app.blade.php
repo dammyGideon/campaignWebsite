@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>John Hobbs for Commissioner</title>
+    <!-- Additional meta tags as needed -->
+    <meta name="description" content="John Hobbs for Commissioner">
     <!-- Favicons -->
   <link href="{{asset("assets/img/logo.png")}}" rel="icon">
   <link href="{{asset("assets/img/logo.png")}}" rel="apple-touch-icon">
@@ -42,6 +43,13 @@
             @yield('content')
         </main>
     </div>
+
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
 </body>
 
 
